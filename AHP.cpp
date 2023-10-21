@@ -1,4 +1,4 @@
-// Spathoulas Dimitris 28-29/12/2022®
+// Spathoulas Dimitris 28-29/12/2022Â®
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -65,7 +65,7 @@ double *b=(double *)malloc(sizeof(double)*n*n);
 	if ( ans==0 ) { */
 		for(i=0;i<n;i++) 
 			for(j=0;j<n;j++) 
-				aw[i]+=b[(i*n)+j]*sum_2[j]; // nomizo exei kapoio lauaki edo
+				aw[i]+=b[(i*n)+j]*sum_2[j];
 		
 		for(i=0;i<n;i++) {
 			aw[i]=aw[i]/sum_2[i]; printf("aw[%d]= %3.2lf \n",i,aw[i]);
