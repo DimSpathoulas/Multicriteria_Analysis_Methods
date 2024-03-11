@@ -157,7 +157,7 @@ return 0;
 }
 
 
-// 
+// left for help
 /*	for (j=0;j<n;j++) 
 		printf("%2d           ",A[0].type[j]);
 	printf("\n");
