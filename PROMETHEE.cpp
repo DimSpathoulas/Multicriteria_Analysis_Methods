@@ -1,4 +1,5 @@
 // Spathoulas Dimitris 4/2/2023-5/2/2023
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -22,9 +23,9 @@ struct upper {
 struct upper a[k];
 int point;
 struct lower {
-	double div[mm][mm]; // mallon 2d mporei kai 1d me mm*mm kai div[j*mm+i] alla siga
+	double div[mm][mm];
 	double pref[mm][mm];
-	double weighted[mm][mm]; // mporo na to kano kateyueian gia ogko kai xrono apo ton pano pinaka
+	double weighted[mm][mm];
 	
 };
 struct lower b[nn];
@@ -58,8 +59,6 @@ int main() {
 		}
 	// TXT VALUES INPUT
 		else {
-			// UPPER KAKO ALLA LEITOYRGEI 
-			// UA MPOROYSA NA KANO TON ANASTROFO APO TO TXT KAI NA EXO N GRAMMES KAI 5 STEILES GIA NA DIAVAZONTAI KALYTERA EDO
 				for (j=0;j<n;j++)
 				fscanf(fptr,"%lf",&a[0].weights[j]);
 				for (j=0;j<n;j++)
@@ -79,7 +78,7 @@ int main() {
 	// MAIN CODE
 	if (v==1) {
 		v=0;
-	// 1ST STEP : DIV MATRIXES hardest one :)
+	// 1ST STEP : DIV MATRIXES
 	for(j=0;j<n;j++) {
 		if (a[1].type[j]==1) {
 			for(x=0;x<m;x++)
@@ -164,7 +163,7 @@ int main() {
 }
 }
 
-	
+// left them for further processing
 /*	for(i=0;i<m;i++) {
 			for(x=0;x<m;x++) {
 				printf("%5.2lf  ",b[0].weighted[i][x]);
