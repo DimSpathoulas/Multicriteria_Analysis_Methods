@@ -1,4 +1,5 @@
 // Spathoulas Dimitris 28-29/12/2022®
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -25,7 +26,7 @@ int main() {
 	
 double *a=(double *)malloc(sizeof(double)*n*n);
 double *b=(double *)malloc(sizeof(double)*n*n);
-// sum_2=(double*)malloc(n*sizeof(double));
+
 	printf("Enter units of perference for each criteria\n");
 	for(i=0;i<n;i++) {
 		for(j=0;j<n;j++) {
@@ -60,9 +61,8 @@ double *b=(double *)malloc(sizeof(double)*n*n);
 		sum_2[i]=sum_2[i]/(1.0*n);	
 		printf("weight[crit_%d]= %5.5lf \n",i,(sum_2[i])*100.0); 
 		}
-/*	printf("Check for incosestency:(y=1/n=0) ");
-	scanf("%d",&ans); 
-	if ( ans==0 ) { */
+
+	
 		for(i=0;i<n;i++) 
 			for(j=0;j<n;j++) 
 				aw[i]+=b[(i*n)+j]*sum_2[j];
