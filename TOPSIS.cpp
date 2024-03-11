@@ -1,4 +1,5 @@
-// Spathoulas Dimitris 29-1/1/2023®
+// Spathoulas Dimitris 29-1/1/2023Â®
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -11,7 +12,7 @@ double max=-1;
 int i,j;
 FILE *fptr;
 char name[k];
-double sum_1[mm+2]; // to +2 einai akyro edo alla naim
+double sum_1[mm+2];
 double sum_2[mm+2];
 double S_1[nn];
 double S_2[nn];
@@ -28,7 +29,7 @@ struct alts {
 	double id[nn];
 	double aid[nn];
 };
-struct alts A[mm]; //edo 
+struct alts A[mm];
 int BEST;
 int SEC=0;
 int m;
@@ -48,15 +49,8 @@ int main (){
 	printf("Please enter number of P (double): ");
 	scanf("%lf",&P); }
 	while (!(P>0.0) );
-	m=m+2; // 1 gia varos krit kai mia aujon fuinon
-	//A=(double*)malloc(m*sizeof(double)); 
-	// EDO
-	//A=(struct alts*)malloc((m*sizeof(struct alts)));
+	m=m+2;
 	
-	/* for (i=0;i<m;i++) {
-		A[i].aid=(double*)(malloc(sizeof(double)));	
-	} */
-	// MEXRI EDO
 	printf("\nWrite name (and destination) of txt file containing weights, type of criteria and values: ");
 	scanf("%s",&name);
 	
@@ -81,7 +75,7 @@ int main (){
 			
 		} 
 	fclose(fptr);
-		// EDO EXO KATI LAUOS :)
+	
 	for(j=0;j<n;j++) {
 		
 		for (i=2;i<m;i++)
@@ -101,7 +95,6 @@ int main (){
 		
 			max=-1;
 	}
-		//MEXRI EDO
 		
 			
 	for(j=0;j<n;j++){
@@ -126,7 +119,7 @@ int main (){
 			A[i].aid[j]=pow(fabs(A[i].weighted[j]-a_ideal[j]),P);
 		}
 	}
-	// edo mporei na yparxei mellontiko problhma alla tora einai ok
+	
 	for(j=0;j<n;j++) {
 		ideal[j]=0.0;
 		a_ideal[j]=0.0; }
@@ -140,17 +133,11 @@ int main (){
 		S_1[i]=pow(sum_1[i],(1.0/P));
 		S_2[i]=pow(sum_2[i],(1.0/P));
 	}
-//	printf("\n  S+           S-\n");
-	for (i=2;i<m;i++)
-		//printf("%4.4lf       %4.4lf\n",S_1[i],S_2[i]);
 	
 	for(i=2;i<m;i++) {
 		CL[i]=S_2[i]/(S_1[i]+S_2[i]);
 	}
-	//printf("\nAlternatives Weights: \n");
-	for(i=2;i<m;i++) {
-	//	printf("%2d alternative : %5.5lf\n",i-1,CL[i]);
-	}
+
 	for(i=2;i<m;i++) {
 		if (max<CL[i]) {
 			BEST=i-1; max=CL[i];
@@ -169,6 +156,8 @@ int main (){
 return 0;
 }
 
+
+// 
 /*	for (j=0;j<n;j++) 
 		printf("%2d           ",A[0].type[j]);
 	printf("\n");
