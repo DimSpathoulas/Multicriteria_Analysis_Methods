@@ -163,7 +163,7 @@ int main() {
 }
 }
 
-// left them for further processing
+// left them for help
 /*	for(i=0;i<m;i++) {
 			for(x=0;x<m;x++) {
 				printf("%5.2lf  ",b[0].weighted[i][x]);
