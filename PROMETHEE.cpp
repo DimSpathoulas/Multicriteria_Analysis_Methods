@@ -105,7 +105,7 @@ int main() {
 					b[j].pref[i][x]=0.0;
 				}
 				
-				if ((b[j].div[i][x]>a[2].q[j])&&(b[j].div[i][x]<=a[3].p[j])) { // H ELSE SAN TRITO
+				if ((b[j].div[i][x]>a[2].q[j])&&(b[j].div[i][x]<=a[3].p[j])) {
 					b[j].pref[i][x]=(b[j].div[i][x]-a[2].q[j])/(a[3].p[j]-a[2].q[j]);
 				}
 				
@@ -120,7 +120,7 @@ int main() {
 	for(j=0;j<n;j++) 
 			for(i=0;i<m;i++) 
 				for(x=0;x<m;x++) 
-					b[j].weighted[i][x]=a[0].weights[j]*b[j].pref[i][x]; // mporei na ginei kateyueian pano
+					b[j].weighted[i][x]=a[0].weights[j]*b[j].pref[i][x];
 				
 
 	// STEP 4 : AWP
@@ -149,6 +149,8 @@ int main() {
 		if (fptr==NULL) {
 			printf("\nFile couldnt be found! \n");	
 		}
+
+			
 	// TXT NET OUTPUTS
 		else {
 			fprintf(fptr,"\n\nF_net for each of the %d alternatives\n",m);
